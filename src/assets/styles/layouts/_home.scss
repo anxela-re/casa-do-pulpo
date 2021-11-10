@@ -191,17 +191,17 @@ ul {
     grid-row: 2 / 4;
     grid-column: 7;
   }
-  .portada .portada-prices {
-    grid-row: 4 / 6;
-    grid-column: 2 / 4;
-  }
   .portada .portada-schedule {
     grid-row: 4 / 7;
     grid-column: 4 / 7;
   }
+  .portada .portada-prices {
+    grid-row: 4 / 5;
+    grid-column: 2;
+  }
   .portada .portada-duration {
-    grid-row: 6 / 7;
-    grid-column: 2 / 4;
+    grid-row: 5 / 6;
+    grid-column: 2;
   }
   .portada .portada-see-more-btn {
     grid-row: 7;
@@ -239,16 +239,16 @@ ul {
     grid-row: 2 / 4;
     grid-column: 7;
   }
-  .portada .portada-prices {
-    grid-row: 5 / 6;
-    grid-column: 2;
-  }
   .portada .portada-schedule {
     grid-row: 4 / 7;
     grid-column: 4 / 6;
   }
+  .portada .portada-prices {
+    grid-row: 4 / 5;
+    grid-column: 2;
+  }
   .portada .portada-duration {
-    grid-row: 6 / 7;
+    grid-row: 5 / 6;
     grid-column: 2;
   }
   .portada-title {
