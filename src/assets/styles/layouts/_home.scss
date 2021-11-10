@@ -66,8 +66,8 @@ ul {
 .artist-names {
   position: absolute;
   top: 10px;
-  width: 2150px;
   display: block;
+  width: 2150px;
   margin: 0 auto;
   overflow: hidden;
   color: $octopus-color;
@@ -158,7 +158,7 @@ ul {
       $current-play-primary-dark 100%
     );
     grid-template-columns: 10% 2fr 1fr 1fr 1fr 10% 50px;
-    grid-template-rows: 1rem 10% 1fr 1fr 1fr 1fr 40px 40px 40px ;
+    grid-template-rows: 1rem 10% 1fr 1fr 1fr 1fr 40px 40px 40px;
   }
   .portada__artist {
     background-color: $white;
@@ -288,7 +288,7 @@ ul {
       $current-play-primary-dark 100%
     );
     grid-template-columns: 10% 2fr 1fr 1fr 1fr 10% 50px;
-    grid-template-rows: 1rem 10% 1fr 1fr 1fr 1fr 40px 40px 40px ;
+    grid-template-rows: 1rem 10% 1fr 1fr 1fr 1fr 40px 40px 40px;
   }
   
 }

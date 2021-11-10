@@ -1,9 +1,9 @@
 .footer {
-  color: $white;
   display: grid;
+  padding: 2rem;
+  color: $white;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 2fr 1fr;
-  padding: 2rem;
   background-image: $octopus-gradient;
   gap: .5rem;
 }
@@ -23,8 +23,8 @@
   }
   .footer__logo {
     grid-column: 2;
-    height: 100%;
     width: auto;
+    height: 100%;
   }
   .footer__nav {
     grid-column: 3;
