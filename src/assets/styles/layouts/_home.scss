@@ -21,7 +21,7 @@ ul {
 .link {
   text-decoration: none;
 }
-.link-portada {
+.link--portada {
   color: $white;
 }
 .link:hover {
@@ -47,7 +47,7 @@ ul {
     $current-play-primary-dark 100%
   );
 }
-.portada-artist {
+.portada__artist {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,21 +85,21 @@ ul {
   padding-left: 1rem;
   content: "·";
 }
-.portada-title {
+.portada__title {
   z-index: 1;
   h1 {
     font-family: $font-family-serif;
     font-size: 3.8rem;
   }
 }
-.portada-image {
+.portada__image {
   background-color: $black;
   background-image: url("../images/theorphanofzhao.jpg");
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: contain;
 }
-.portada-description {
+.portada__description {
   p {
     padding-left: 1rem;
     font-family: $font-family-sans-serif;
@@ -109,7 +109,7 @@ ul {
     color: $white;
   }
 }
-.portada-btn {
+.portada__info-btn {
   width: 100%;
   height: 100%;
   color: $white;
@@ -127,29 +127,29 @@ ul {
     text-align: center;
   }
 }
-.portada-btn:hover {
+.portada__info-btn:hover {
   cursor: pointer;
 }
-.portada-duration {
+.portada__duration {
   display: none;
   font-weight: 500;
   color: $black;
 }
-.portada-schedule {
+.portada__schedule {
   display: none;
   font-weight: 500;
   color: $black;
 }
-.portada-prices {
+.portada__prices {
   display: none;
   font-weight: 500;
   color: $black;
 }
-.portada-see-more-btn {
+.portada__see-more-btn {
   font-size: 1.5rem;
   color: $white;
 }
-.list-portada .list-portada-item {
+.list--portada .list__item--portada {
   border-top: 1px solid $black;
   border-bottom: 1px solid $black;
   margin: {
@@ -170,54 +170,32 @@ ul {
     grid-template-columns: 10% 2fr 1fr 1fr 1fr 10% 50px;
     grid-template-rows: 30px 10% 1fr 1fr 1fr 1fr 40px 40px 40px;
   }
-  .portada .portada-artist {
+  .portada__artist {
     background-color: $white;
     grid-row: 9;
     grid-column: 1 / -1;
   }
-  .portada .portada-title {
+  .portada__title {
     grid-row: 2 / 4;
     grid-column: 2 / 7;
-  }
-  .portada .portada-image {
-    grid-row: 2 / 9;
-    grid-column: 1 / 3;
-  }
-  .portada .portada-description {
-    grid-row: 4 / 7;
-    grid-column: 3 / 7;
-  }
-  .portada .portada-btn {
-    grid-row: 2 / 4;
-    grid-column: 7;
-  }
-  .portada .portada-schedule {
-    grid-row: 4 / 7;
-    grid-column: 4 / 7;
-  }
-  .portada .portada-prices {
-    grid-row: 4 / 5;
-    grid-column: 2;
-  }
-  .portada .portada-duration {
-    grid-row: 5 / 6;
-    grid-column: 2;
-  }
-  .portada .portada-see-more-btn {
-    grid-row: 7;
-    grid-column: 4 / 6;
-  }
-  .portada-title {
     h1 {
       font-size: 4.1rem;
     }
   }
-  .portada-description {
+  .portada__image {
+    grid-row: 2 / 9;
+    grid-column: 1 / 3;
+  }
+  .portada__description {
+    grid-row: 4 / 7;
+    grid-column: 3 / 7;
     p {
       font-size: 1.1rem;
     }
   }
-  .portada-btn {
+  .portada__info-btn {
+    grid-row: 2 / 4;
+    grid-column: 7;
     border-top: none;
     border-left: 5px solid $white;
     p {
@@ -225,36 +203,50 @@ ul {
       writing-mode: tb-rl;
     }
   }
-}
-@media screen and (min-width: $limit-width-table) {
-  .portada .portada-title {
-    grid-row: 2 / 4;
-    grid-column: 2 / 5;
-  }
-  .portada .portada-description {
+  .portada__schedule {
     grid-row: 4 / 7;
-    grid-column: 3 / 6;
+    grid-column: 4 / 7;
   }
-  .portada .portada-btn {
-    grid-row: 2 / 4;
-    grid-column: 7;
-  }
-  .portada .portada-schedule {
-    grid-row: 4 / 7;
-    grid-column: 4 / 6;
-  }
-  .portada .portada-prices {
+  .portada__prices {
     grid-row: 4 / 5;
     grid-column: 2;
   }
-  .portada .portada-duration {
+  .portada__duration {
     grid-row: 5 / 6;
     grid-column: 2;
   }
-  .portada-title {
+  .portada__see-more-btn {
+    grid-row: 7;
+    grid-column: 4 / 6;
+  }
+}
+@media screen and (min-width: $limit-width-table) {
+  .portada__title {
+    grid-row: 2 / 4;
+    grid-column: 2 / 5;
     h1 {
       font-size: 5rem;
     }
+  }
+  .portada__description {
+    grid-row: 4 / 7;
+    grid-column: 3 / 6;
+  }
+  .portada__info-btn {
+    grid-row: 2 / 4;
+    grid-column: 7;
+  }
+  .portada__schedule {
+    grid-row: 4 / 7;
+    grid-column: 4 / 6;
+  }
+  .portada__prices {
+    grid-row: 4 / 5;
+    grid-column: 2;
+  }
+  .portada__duration {
+    grid-row: 5 / 6;
+    grid-column: 2;
   }
 }
 
@@ -265,28 +257,28 @@ ul {
     $white 0%,
     $current-play-primary-dark 100%
   );
-  .portada-title {
+  .portada__title {
     color: $black;
   }
-  .portada-image {
+  .portada__image {
     display: none;
   }
-  .portada-description {
+  .portada__description {
     display: none !important;
   }
-  .portada-schedule {
+  .portada__schedule {
     display: block;
   }
-  .portada-prices {
+  .portada__prices {
     display: block;
   }
-  .portada-btn {
+  .portada__info-btn {
     background-color: $black;
   }
-  .portada-duration {
+  .portada__duration {
     display: block;
   }
-  .portada-see-more-btn {
+  .portada__see-more-btn {
     a {
       color: $black;
     }
@@ -307,6 +299,8 @@ ul {
   }
   
 }
+
+
 @keyframes move {
   0% {
     transform: translate(0, 0);

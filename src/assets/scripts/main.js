@@ -11,7 +11,7 @@
  */
 
 +(function () {
-  const btnPortada = document.querySelector(".portada-btn");
+  const btnPortada = document.querySelector(".portada__info-btn");
   let showSchedule = false;
   let btnClick = false;
   let portadaEl = document.querySelector('.portada');
