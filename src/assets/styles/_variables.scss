@@ -27,3 +27,32 @@ $octopus-gradient: linear-gradient(
 
 $limit-width-mobile: 500px;
 $limit-width-table: 1100px;
+
+$theme-colors: (
+  "primary": $octopus-color,
+);
+
+$octopus-colors: (
+    "octopus": $octopus-color,
+    "octopus-accent": $octopus-color-accent,
+    "octopus-bg": $octopus-color-bg,
+);
+$theme-colors: map-merge($theme-colors, $octopus-colors);
+
+@function tint-color($color, $weight) {
+  @return mix(white, $color, $weight)
+};
+
+@function shade-color($color, $weight) {
+  @return mix(black, $color, $weight)
+};
+
+@function shift-color($color, $weight) {
+  @return if($weight > 0, shade-color($color, $weight), tint-color($color, -$weight));
+}
+
+@each $color, $value in $theme-colors {
+  .swatch-#{$color} {
+    color: color-contrast($value);
+  }
+}

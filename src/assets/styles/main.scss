@@ -21,11 +21,8 @@
 
 // 2. Include any default variable overrides here
 $body-bg: $octopus-color-bg;
-$body-color: #111;
+$body-color: $black;
 
-$theme-colors: (
-  "primary": $octopus-color,
-);
 
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../../../node_modules/bootstrap/scss/variables";
