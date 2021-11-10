@@ -1,0 +1,44 @@
+.nav__list {
+  margin: auto;
+  padding: 0;
+  text-align: center;
+}
+.nav__list-item {
+  display: block;
+  text-transform: uppercase;
+  margin: {
+    top: .5rem;
+    bottom: .5rem;
+  };
+  a {
+    color: $black;
+    font-weight: 600;
+    text-decoration: none;
+  }
+}
+.nav__list-item.active {
+  a {
+    background-color: $white;
+    color: $octopus-color;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: $limit-width-tablet) {
+  .nav__list-item {
+    display: inline-block;
+  }
+  .nav__list-item::after {
+    content: "|";
+    padding: 1rem;
+  }
+  .nav__list-item:last-child::after {
+    content: "";
+  }
+}
+
+.nav__list--footer {
+  a {
+    color: $white;
+    font-weight: 400;
+  }
+}

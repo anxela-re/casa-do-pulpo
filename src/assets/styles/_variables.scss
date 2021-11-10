@@ -26,13 +26,14 @@ $octopus-gradient: linear-gradient(
 );
 
 $limit-width-mobile: 500px;
-$limit-width-table: 1100px;
+$limit-width-tablet: 1100px;
 
 $theme-colors: (
   "primary": $octopus-color,
 );
 
 $octopus-colors: (
+  "white": $white,
   "octopus": $octopus-color,
   "octopus-accent": $octopus-color-accent,
   "octopus-bg": $octopus-color-bg,

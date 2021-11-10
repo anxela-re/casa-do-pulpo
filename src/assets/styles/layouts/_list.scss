@@ -1,0 +1,13 @@
+
+
+.list__item--portada {
+    border-top: 1px solid $black;
+    border-bottom: 1px solid $black;
+    margin: {
+      top: 1rem;
+      bottom: 1rem;
+    }
+    p {
+      margin-bottom: 0;
+    }
+  }

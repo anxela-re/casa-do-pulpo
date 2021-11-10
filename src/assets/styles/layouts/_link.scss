@@ -1,0 +1,16 @@
+.link {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.link.link--underline:hover {
+  text-decoration: underline;
+  text-decoration-color: $white;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 5px;
+}
+
+.link.link--cross:hover {
+  text-decoration: line-through;
+
+}

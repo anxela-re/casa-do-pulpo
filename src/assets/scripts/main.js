@@ -5,7 +5,7 @@
 
 // import 'some-node-module';
 // import SomeModule from 'some-node-module';
-
+import * as bootstrap from '../../../node_modules/bootstrap';
 /**
  * Write any other JavaScript below
  */
