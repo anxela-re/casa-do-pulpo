@@ -17,7 +17,7 @@
 
 // @import "some-node-module";
 // @import "@some-company/some-node-module";
- @import "@fortawesome/fontawesome-free/css/all.css";
+@import "../../../node_modules/@fortawesome/fontawesome-free/css/all.css";
 @import "../../../node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
@@ -52,6 +52,7 @@ $body-color: $black;
 @import "layouts/nav";
 @import "layouts/link";
 @import "layouts/elenco";
+@import "layouts/header";
 /**
  * Do NOT include anything else in this file!
  */

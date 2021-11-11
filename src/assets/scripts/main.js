@@ -5,7 +5,7 @@
 
 // import 'some-node-module';
 // import SomeModule from 'some-node-module';
-import * as bootstrap from '../../../node_modules/bootstrap';
+// import * as bootstrap from '../../../node_modules/bootstrap';
 /**
  * Write any other JavaScript below
  */
@@ -14,30 +14,31 @@ import * as bootstrap from '../../../node_modules/bootstrap';
   const btnPortada = document.querySelector(".portada__info-btn");
   let showSchedule = false;
   let btnClick = false;
-  let portadaEl = document.querySelector('.portada');
-  btnPortada.addEventListener("mouseenter", () => {
-    if (!btnClick) {
-      showSchedule = true;
+  let portadaEl = document.querySelector(".portada");
+  if (btnPortada) {
+    btnPortada.addEventListener("mouseenter", () => {
+      if (!btnClick) {
+        showSchedule = true;
+        toggleShowSchedule();
+      }
+    });
+    btnPortada.addEventListener("mouseleave", () => {
+      if (!btnClick) {
+        showSchedule = false;
+        toggleShowSchedule();
+      }
+    });
+    btnPortada.addEventListener("click", () => {
+      btnClick = !btnClick;
+      showSchedule = btnClick;
       toggleShowSchedule();
-    }
-  });
-  btnPortada.addEventListener("mouseleave", () => {
-    if (!btnClick) {
-      showSchedule = false;
-      toggleShowSchedule();
-    }
-  });
-  btnPortada.addEventListener("click", () => {
-    btnClick = !btnClick;
-    showSchedule = btnClick;
-    toggleShowSchedule();
-  });
-
+    });
+  }
   function toggleShowSchedule() {
     if (showSchedule) {
-      portadaEl.classList.add('show-schedule');
+      portadaEl.classList.add("show-schedule");
     } else {
-      portadaEl.classList.remove('show-schedule')
+      portadaEl.classList.remove("show-schedule");
     }
   }
 })();

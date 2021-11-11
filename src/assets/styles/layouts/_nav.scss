@@ -12,14 +12,11 @@
   text-transform: uppercase;
   a {
     font-weight: 600;
-    color: $black;
     text-decoration: none;
   }
 }
-.nav__list-item.active {
+.nav__list--footer .nav__list-item.active {
   a {
-    font-weight: 500;
-    color: $octopus-color;
     background-color: $white;
   }
 }
@@ -39,6 +36,12 @@
 .nav__list--footer {
   a {
     font-weight: 400;
-    color: $white;
+  }
+}
+
+
+@each $color, $value in $theme-colors {
+  .nav__list-item--#{$color} {
+    color: $value;
   }
 }

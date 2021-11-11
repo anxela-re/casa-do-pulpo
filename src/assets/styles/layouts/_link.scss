@@ -1,16 +1,28 @@
 .link {
   text-decoration: none;
+}
+.link:hover {
+  font-weight: 600;
+}
+.link--uppercase {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 .link.link--underline:hover {
   text-decoration: underline;
-  text-decoration-color: $white;
   text-decoration-thickness: 5px;
-  text-underline-offset: 5px;
+  text-underline-offset: 3px;
 }
 
 .link.link--cross:hover {
   text-decoration: line-through;
+}
 
+@each $color, $value in $theme-colors {
+  .link-#{$color} {
+    text-decoration-color: $value!important;
+  }
+  .link-#{$color}:hover {
+    color: $value;
+  }
 }

@@ -34,6 +34,7 @@ $theme-colors: (
 
 $octopus-colors: (
   "white": $white,
+  "black": $black,
   "octopus": $octopus-color,
   "octopus-accent": $octopus-color-accent,
   "octopus-bg": $octopus-color-bg,
@@ -59,5 +60,8 @@ $theme-colors: map-merge($theme-colors, $octopus-colors);
 @each $color, $value in $theme-colors {
   .swatch-#{$color} {
     color: color-contrast($value);
+  }
+  .color-#{$color} {
+    color: $value;
   }
 }
