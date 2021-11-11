@@ -149,6 +149,8 @@ ul {
 .portada__see-more-btn {
   font-size: 1.5rem;
   color: $white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 @media screen and (min-width: $limit-width-mobile) {
   .portada {
@@ -190,6 +192,8 @@ ul {
     border-left: 5px solid $white;
     p {
       font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       writing-mode: tb-rl;
     }
   }

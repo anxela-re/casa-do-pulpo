@@ -1,0 +1,29 @@
+.info__portada {
+  padding: {
+    top: 2rem;
+    right: 2rem;
+    bottom: 0;
+    left: 2rem;
+  }
+  align-items: center;
+  width: 100%;
+  background-color: $black;
+}
+.info__portada__title {
+  font-family: $font-family-serif;
+  font-size: 3.5rem;
+}
+.info__portada__author {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.info__portada__image {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+}
+@media screen and (min-width: $limit-width-mobile) {
+  .info__portada__image {
+    align-self: flex-end;
+  }
+}
