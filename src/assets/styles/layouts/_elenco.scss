@@ -1,26 +1,23 @@
-title {
-
-}
 .subtitle {
     text-transform: uppercase;
     letter-spacing: 2px;
 }
 .elenco {
-    padding: 1rem;
-    width: 100%;
     display:flex;
     flex-flow: row wrap;
-    gap: .5rem;
     justify-content: center;
+    width: 100%;
     max-width: 1200px;
+    padding: 1rem;
     margin: auto;
+    gap: .5rem;
 }
 .elenco__item {
-    max-width: 350px;
-    text-align: center;
-    padding: .5rem;
     width: 100%;
+    max-width: 350px;
+    padding: .5rem;
     color: $black;
+    text-align: center;
 }
 .elenco__image {
     width: 100%;
@@ -33,9 +30,9 @@ title {
         top: 1rem;
         bottom: .1rem;
     }
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 600;
 }
 .elenco__artist {
     padding-top: .1rem;
