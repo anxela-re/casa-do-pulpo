@@ -27,3 +27,53 @@
     align-self: flex-end;
   }
 }
+
+.infoplay {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3,auto);
+  max-width: 1100px;
+  padding: 1rem;
+  margin: auto;
+  gap: 6rem;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: $limit-width-mobile) {
+  .infoplay {
+    grid-template-columns: 1fr 2fr;
+    grid-row: 1fr 1fr;
+  }
+  .infoplay__ficha {
+    grid-column: 1 / -1;
+  }
+}
+@media screen and (min-width: $limit-width-tablet) {
+  .infoplay {
+    padding: 2rem;
+  }
+}
+.text-bold {
+  font-weight: 900;
+}
+.blockquote--infoplay {
+  font-family: $font-family-serif;
+  font-size: 1.8rem;
+  font-weight: 100;
+  line-height: 1.2;
+}
+
+.act {
+  display: grid;
+  grid-template-columns: 90px 3fr;
+  grid-template-rows: 1fr;
+  gap: .5rem;
+}
+.act__title {
+  letter-spacing: 2px;
+}
+.act__description {
+  padding-left: 1rem;
+  border-left: 1px solid $black;
+}
