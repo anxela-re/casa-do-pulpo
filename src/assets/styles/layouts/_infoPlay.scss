@@ -54,12 +54,20 @@
 }
 .infoplay__schedule,
 .infoplay__prices,
-.infoplay__duration {
+.infoplay__duration,
+.infoplay__creatives,
+.infoplay__cast {
   grid-column: 1 / -1;
 }
 @media screen and (min-width: $limit-width-mobile) {
   .infoplay {
     max-width: 700px;
+  }
+  .infoplay__cast {
+    grid-column: 1;
+  }
+  .infoplay__creatives {
+    grid-column: 2;
   }
 }
 @media screen and (min-width: $limit-width-tablet) {
@@ -80,7 +88,8 @@
   .infoplay__content {
     padding-left: 2rem;
   }
-  .infoplay__cast, .infoplay__creatives {
+  .infoplay__cast,
+  .infoplay__creatives {
     grid-column: 1 / -1;
   }
 }

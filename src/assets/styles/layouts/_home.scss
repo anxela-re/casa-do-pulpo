@@ -18,13 +18,12 @@ ul {
   list-style: none;
 }
 .portada {
-  &.mobile {
-  height: 145vh;
-
-  }
+  display: grid;
   width: 100%;
   height: 100vh;
-  display: grid;
+  &.mobile {
+    height: 145vh;
+  }
   grid-template-rows: 1fr 2fr 1fr 50px 50px 50px;
   grid-template-columns: 1fr;
   color: $current-play-primary;
@@ -40,8 +39,8 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: $octopus-gradient;
   overflow: hidden;
+  background-image: $octopus-gradient;
 }
 .artist-container {
   position: relative;
@@ -53,9 +52,9 @@ ul {
   background-color: $white;
 }
 .artist__btn {
-    display: none;
-    height: 100%;
-    line-height: 2;
+  display: none;
+  height: 100%;
+  line-height: 2;
 }
 .artist-container:hover {
   cursor: pointer;
@@ -283,7 +282,7 @@ ul {
       color: $black;
     }
     a:hover {
-      text-decoration-color: $black!important;
+      text-decoration-color: $black !important;
       font-weight: 800;
     }
   }
@@ -299,9 +298,7 @@ ul {
     grid-template-columns: 10% 2fr 1fr 1fr 1fr 10% 50px;
     grid-template-rows: 1rem 80px 80px 1fr 1fr 1fr 40px 40px 40px;
   }
-  
 }
-
 
 @keyframes move {
   0% {
