@@ -41,6 +41,7 @@ ul {
   justify-content: center;
   overflow: hidden;
   background-image: $octopus-gradient;
+  z-index: 1;
 }
 .artist-container {
   position: relative;
