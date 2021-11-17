@@ -64,6 +64,9 @@ $theme-colors: map-merge($theme-colors, $octopus-colors);
     color: color-contrast($value);
   }
   .color-#{$color} {
-    color: $value;
+    color: $value!important;
+  }
+  .background-#{$color} {
+    background-color: $value!important;
   }
 }

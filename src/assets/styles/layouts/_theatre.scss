@@ -14,7 +14,7 @@
 
 .swiper {
   max-width: 1100px;
-  height: 50vh;
+  height: 60vh;
   margin: 2rem auto;
 }
 .swiper-slide {
@@ -33,5 +33,226 @@
     width: 100%;
     height: auto;
     filter: grayscale(1);
+  }
+}
+.swiper-pagination-bullet-active {
+  background-color: $octopus-color-accent !important;
+}
+
+.contact {
+  display: grid;
+  min-height: 100vh;
+  padding: 1rem;
+  margin: 0;
+  background-color: #ededed;
+  background-image: url("../images/fatih-kilic-m1dM7ZXvdMs-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  place-items: center;
+}
+.contact__container {
+  position: relative;
+  width: 100%;
+  max-width: 750px;
+  height: 100%;
+  min-height: 750px;
+  overflow: hidden;
+  background-color: #ededed;
+  box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.2), 0 1rem 2rem rgba(255, 255, 255, 0.2);
+}
+/* SIDE-CONTENTS */
+.side-content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 2rem;
+  transition: all 0.6s ease-in-out;
+}
+.side-content.right {
+  left: 0;
+  z-index: 2;
+  height: 50%;
+}
+.side-content.left {
+  left: 0;
+  z-index: 1;
+  height: 50%;
+  opacity: 0;
+}
+.contact__container.right-side-active .side-content.right {
+  transform: translateY(100%);
+}
+.contact__container.right-side-active .side-content.left {
+  z-index: 5;
+  opacity: 1;
+  transform: translateY(100%);
+  animation: show 0.6s;
+}
+
+/* OVERLAYS */
+.container-overlays {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+}
+.contact__container.right-side-active .container-overlays {
+  transform: translateY(-100%);
+}
+
+.overlays {
+  position: relative;
+  top: -100%;
+  width: 100%;
+  height: 200%;
+  background-color: #ededed;
+  background-image: url("../images/fatih-kilic-m1dM7ZXvdMs-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.6s ease-in-out;
+  transform: translateY(0);
+}
+.contact__container.right-side-active .overlays {
+  transform: translateY(50%);
+}
+.overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.6s ease-in-out;
+  transform: translateY(0);
+}
+.overlay.left {
+  transform: translateY(-20%);
+}
+.contact__container.right-side-active .overlay.left {
+  transform: translateY(0);
+}
+.overlay.right {
+  // right: 0;
+  bottom: 0;
+  transform: translateY(0);
+}
+.contact__container.right-side-active .overlay.right {
+  transform: translateY(20%);
+}
+
+@media screen and (min-width: $limit-width-mobile) {
+  .contact__container {
+    height: 400px;
+    min-height: 400px;
+  }
+  .side-content {
+    height: 100%;
+  }
+  .side-content.right {
+    width: 50%;
+    height: 100%;
+  }
+  .side-content.left {
+    width: 50%;
+    height: 100%;
+  }
+
+  .contact__container.right-side-active .side-content.right {
+    transform: translateX(100%);
+  }
+  .contact__container.right-side-active .side-content.left {
+    transform: translateX(100%);
+  }
+  .container-overlays {
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+  }
+  .contact__container.right-side-active .container-overlays {
+    transform: translateX(-100%);
+  }
+  .overlays {
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    transform: translateX(0);
+  }
+
+  .contact__container.right-side-active .overlays {
+    transform: translateX(50%);
+  }
+  .overlay {
+    top: 0;
+    width: 50%;
+    height: 100%;
+    transform: translateX(0);
+  }
+  .overlay.left {
+    transform: translateX(-20%);
+  }
+  .contact__container.right-side-active .overlay.left {
+    transform: translateX(0);
+  }
+  .overlay.right {
+    top: 0;
+    right: 0;
+    transform: translateX(0);
+  }
+  .contact__container.right-side-active .overlay.right {
+    transform: translateX(20%);
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  background-color: #ededed;
+}
+.form-group {
+  width: 100%;
+  margin: 0.5rem;
+}
+.side-content--right {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+textarea {
+  height: 120px;
+}
+
+@keyframes show {
+  50% {
+    z-index: 1;
+    opacity: 0;
+  }
+  100% {
+    z-index: 5;
+    opacity: 1;
   }
 }

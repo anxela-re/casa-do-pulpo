@@ -13,9 +13,9 @@ import Swiper, { Navigation, Pagination } from "swiper";
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 // swiper bundle styles
-import '../../../node_modules/swiper/swiper-bundle.css';
-import '../../../node_modules/swiper/swiper.scss';
-import '../../../node_modules/swiper/swiper-vars.scss';
+import "../../../node_modules/swiper/swiper-bundle.css";
+import "../../../node_modules/swiper/swiper.scss";
+import "../../../node_modules/swiper/swiper-vars.scss";
 // swiper core styles
 // import "swiper/css";
 
@@ -31,47 +31,6 @@ Swiper.use([Navigation, Pagination]);
  */
 
 +(function () {
-  const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    direction: "horizontal",
-    loop: true,
-    // slidesPerView: 1,
-    // spaceBetween: 10,
-    // Responsive breakpoints
-    centeredSlides: true,
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-      // when window width is >= 480px
-      480: {
-        slidesPerView: 2,
-        spaceBetween: 30
-      },
-      // when window width is >= 640px
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 40
-      }
-    },
-    // If we need pagination
-    // pagination: {
-    //   el: ".swiper-pagination",
-    // },
-
-    // Navigation arrows
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: ".swiper-scrollbar",
-    // },
-  });
 
   const getDeviceType = () => {
     const ua = navigator.userAgent;
@@ -106,6 +65,50 @@ Swiper.use([Navigation, Pagination]);
   }
 
   window.addEventListener("load", () => {
+    const swiper = new Swiper(".swiper", {
+      // Optional parameters
+      direction: "horizontal",
+      loop: true,
+      // slidesPerView: 1,
+      // spaceBetween: 10,
+      // Responsive breakpoints
+      centeredSlides: true,
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 20,
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        820: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+  
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+  
+      // And if we need scrollbar
+      // scrollbar: {
+      //   el: ".swiper-scrollbar",
+      // },
+    });
     let showSchedule = false;
     let btnClick = false;
     window.addEventListener("scroll", onScroll);
@@ -143,6 +146,16 @@ Swiper.use([Navigation, Pagination]);
       } else {
         portadaEl.classList.remove("show-schedule");
       }
+    }
+    const contactContainer = document.querySelector(".contact__container");
+
+    if (contactContainer) {
+      document.querySelector("#go-left").addEventListener("click", () => {
+        contactContainer.classList.toggle("right-side-active");
+      });
+      document.querySelector("#go-right").addEventListener("click", () => {
+        contactContainer.classList.toggle("right-side-active");
+      });
     }
   });
 })();
