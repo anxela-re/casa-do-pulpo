@@ -7,7 +7,7 @@
 // import SomeModule from 'some-node-module';
 // import * as bootstrap from '../../../node_modules/bootstrap';
 // core version + navigation, pagination modules:
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination } from "../../../node_modules/swiper";
 // import Swiper and modules styles
 // import 'swiper/';
 // import 'swiper/css/navigation';
@@ -52,7 +52,7 @@ Swiper.use([Navigation, Pagination]);
     if (infoPlayImage) {
       infoPlayImage.style.transform = `matrix(1,0,0,1,0,${calculateTransform(
         0,
-        50
+        40
       )})`;
     }
   }

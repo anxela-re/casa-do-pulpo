@@ -13,3 +13,9 @@
   border-top: 1px solid $black;
   border-bottom: 1px solid $black;
 }
+
+.list--indexContent {
+  max-width: 800px;
+  margin: 1rem auto 2rem;
+  list-style: disc;
+}
