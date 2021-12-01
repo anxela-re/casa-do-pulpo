@@ -1,4 +1,5 @@
 .info__portada {
+  display: table;
   padding: {
     top: 2rem;
     right: 2rem;
@@ -11,14 +12,17 @@
   background-color: $black;
 }
 .info__portada__title {
+  display: table-row;
   font-family: $font-family-serif;
   font-size: 3.5rem;
 }
 .info__portada__author {
+  display: table-row;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 .info__portada__image {
+  display: table-cell;
   width: 80%;
   max-width: 500px;
   height: auto;
@@ -69,7 +73,7 @@
 }
 .infoplay__image {
   width: 100%;
-  height: 20vh;
+  height: 50vh;
   background-image: url("../images/stefano-stacchini-jhPSJDhiRyQ-unsplash.jpg");
   background-attachment: fixed;
   background-position: top;
@@ -83,9 +87,6 @@
     .infoplay__creatives {
       grid-column: 2;
     }
-  }
-  .infoplay__image {
-    height: 50vh;
   }
 }
 @media screen and (min-width: $limit-width-tablet) {

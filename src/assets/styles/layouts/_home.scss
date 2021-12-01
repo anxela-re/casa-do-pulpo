@@ -18,14 +18,12 @@ ul {
   list-style: none;
 }
 .portada {
-  display: grid;
+  display: table;
   width: 100%;
   height: 100vh;
   &.mobile {
     height: 145vh;
   }
-  grid-template-rows: 1fr 2fr 1fr 50px 50px 50px;
-  grid-template-columns: 1fr;
   color: $current-play-primary;
   background-color: $black;
   background-image: linear-gradient(
@@ -38,6 +36,7 @@ ul {
 .portada__theatre {
   z-index: 1;
   display: flex;
+  display: table-row;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
@@ -92,6 +91,8 @@ ul {
 }
 .portada__title {
   z-index: 1;
+  display: flex;
+  display: table-row;
   h1 {
     font-family: $font-family-serif;
     font-size: 2.8rem;
@@ -104,7 +105,19 @@ ul {
   background-position: bottom left;
   background-size: contain;
 }
+
+@supports (display: grid) {
+  .portada {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr 50px 50px 50px;
+    grid-template-columns: 1fr;
+  }
+  .portada__description {
+    display: flex;
+  }
+}
 .portada__description {
+  display: table-row;
   p {
     padding-left: 1rem;
     font-family: $font-family-sans-serif;
@@ -151,6 +164,7 @@ ul {
   color: $black;
 }
 .portada__see-more-btn {
+  display: table-row;
   font-size: 1.5rem;
   color: $white;
   text-transform: uppercase;
@@ -191,6 +205,7 @@ ul {
     }
   }
   .portada__info-btn {
+    display:table-row;
     grid-row: 2 / 4;
     grid-column: 7;
     border-top: none;

@@ -7,8 +7,8 @@
   width: 100%;
   gap: 0.5rem;
   color: $white;
-  background-image: $octopus-gradient;
   text-align: center;
+  background-image: $octopus-gradient;
 }
 @supports (display: grid) {
   .footer {
@@ -31,14 +31,14 @@
 }
 @media screen and (min-width: $limit-width-mobile) {
   .footer__logo {
+    display: table-row;
     width: auto;
     height: 100%;
-    display: table-row;
   }
   .footer__nav {
+    display: table-row;
     flex-direction: row;
     justify-content: center;
-    display: table-row;
   }
   @supports (display: grid) {
     .footer {
