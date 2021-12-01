@@ -2,28 +2,17 @@
  * Import dependencies from node_modules
  * see commented examples below
  */
+import * as bootstrap from '../../../node_modules/bootstrap';
 
 // import 'some-node-module';
 // import SomeModule from 'some-node-module';
-// import * as bootstrap from '../../../node_modules/bootstrap';
 // core version + navigation, pagination modules:
+
 import Swiper, { Navigation, Pagination } from "../../../node_modules/swiper";
-// import Swiper and modules styles
-// import 'swiper/';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-// swiper bundle styles
 import "../../../node_modules/swiper/swiper-bundle.css";
 import "../../../node_modules/swiper/swiper.scss";
 import "../../../node_modules/swiper/swiper-vars.scss";
-// swiper core styles
-// import "swiper/css";
 
-// modules styles
-// import "swiper/css/navigation";
-// import "swiper/css/pagination";
-
-// configure Swiper to use modules
 Swiper.use([Navigation, Pagination]);
 
 /**
@@ -31,7 +20,6 @@ Swiper.use([Navigation, Pagination]);
  */
 
 +(function () {
-
   const getDeviceType = () => {
     const ua = navigator.userAgent;
     if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
@@ -64,27 +52,22 @@ Swiper.use([Navigation, Pagination]);
     return calc;
   }
 
+
   window.addEventListener("load", () => {
+
     const swiper = new Swiper(".swiper", {
-      // Optional parameters
       direction: "horizontal",
       loop: true,
-      // slidesPerView: 1,
-      // spaceBetween: 10,
-      // Responsive breakpoints
       centeredSlides: true,
       breakpoints: {
-        // when window width is >= 320px
         320: {
           slidesPerView: 1,
           spaceBetween: 20,
         },
-        // when window width is >= 480px
         480: {
           slidesPerView: 2,
           spaceBetween: 20,
         },
-        // when window width is >= 640px
         640: {
           slidesPerView: 3,
           spaceBetween: 20,
@@ -97,17 +80,11 @@ Swiper.use([Navigation, Pagination]);
       pagination: {
         el: ".swiper-pagination",
       },
-  
-      // Navigation arrows
+
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-  
-      // And if we need scrollbar
-      // scrollbar: {
-      //   el: ".swiper-scrollbar",
-      // },
     });
     let showSchedule = false;
     let btnClick = false;

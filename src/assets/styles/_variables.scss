@@ -4,15 +4,8 @@ $font-family-sans-serif: "Raleway", "Helvetica Neue", Arial, sans-serif,
   "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-serif: "Merriweather", "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
-
-$mqMinWidth: 420px;
 $current-play-primary-dark: #9f0102;
-// $current-play-primary-dark: #3a0102;
 $current-play-primary: #bb020e;
-// $current-play-primary: #6a0002;
 
 $white: #fff;
 $black: #020204;
@@ -49,22 +42,7 @@ $millars: 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000;
   @return mix(white, $color, $weight);
 }
 
-@function shade-color($color, $weight) {
-  @return mix(black, $color, $weight);
-}
-
-@function shift-color($color, $weight) {
-  @return if(
-    $weight > 0,
-    shade-color($color, $weight),
-    tint-color($color, -$weight)
-  );
-}
-
 @each $color, $value in $theme-colors {
-  .swatch-#{$color} {
-    color: color-contrast($value);
-  }
   .color-#{$color} {
     color: $value !important;
   }
